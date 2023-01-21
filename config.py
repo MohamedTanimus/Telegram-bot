@@ -1,2 +1,2 @@
-BOT_TOKEN = "1816198459:AAEG2c-RD1cTZCJqCW9YcTUf13oYIRJ8vz8"
-APP_URL = "https://sidrabot.herokuapp.com/" + BOT_TOKEN
+BOT_TOKEN = "5934952771:AAHsnRP_5xHqAgFqKxXTOw6SC9TsagGVzKM"
+APP_URL = "https://tgbbbit.herokuapp.com/" + BOT_TOKEN
