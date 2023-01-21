@@ -53,7 +53,7 @@ def boten(message):
 			c1=cc[0]
 			cun= (cc.split(c1)[1])
 			list=f"{cun}|{gk}"
-			apibinlist = json.loads(requests.get("https://lookup.binlist.net/"+cun).text)
+			apibinlist = requests.get("https://lookup.binlist.net/"+cun).json()
 			emoji = apibinlist["country"]["emoji"]
 			name = apibinlist["country"]["name"]
 			binType = apibinlist["type"]
