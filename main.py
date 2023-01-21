@@ -15,9 +15,9 @@ logger.setLevel(logging.DEBUG)
 def boten(message):
 	key = types.InlineKeyboardMarkup()
 	b2=types.InlineKeyboardButton(text='CHANEEL', url='https://t.me/Freeintrnn')
-	bot.send_message(message.chat.id,'RUN OKAY WAIT HITS'=respo,parse_mode='html',reply_markup=key)
 	key.row_width = 1
 	key.add(b2)
+	bot.send_message(message.chat.id,'RUN OKAY WAIT HITS'=respo,parse_mode='html',reply_markup=key)
 	bi='4536'
 	bb='0987654321'
 	ya=['2023','2024','2025','2026','2027','2028','2029']
