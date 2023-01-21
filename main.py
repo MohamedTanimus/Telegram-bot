@@ -1,4 +1,4 @@
-import requests,user_agent,flask,telebot,random,os,sys
+import requests,user_agent,json,flask,telebot,random,os,sys
 import telebot
 from telebot import types
 from user_agent import generate_user_agent
@@ -10,14 +10,12 @@ bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
-
 @bot.message_handler(commands=['start'])
 def boten(message):
 	key = types.InlineKeyboardMarkup()
 	b2=types.InlineKeyboardButton(text='CHANEEL', url='https://t.me/Freeintrnn')
 	key.row_width = 1
 	key.add(b2)
-	bot.send_message(message.chat.id,'RUN OKAY WAIT HITS'=respo,parse_mode='html',reply_markup=key)
 	bi='4536'
 	bb='0987654321'
 	ya=['2023','2024','2025','2026','2027','2028','2029']
@@ -65,27 +63,8 @@ def boten(message):
 				scheme = apibinlist["scheme"]
 			except:
 				scheme=''
-			url='https://api.stripe.com/v1/payment_methods'
-			h={'Host':'api.stripe.com',
-'content-length':'396',
-'sec-ch-ua':'" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"',
-'accept':'application/json',
-'content-type':'application/x-www-form-urlencoded',
-'sec-ch-ua-mobile':'?1',
-'user-agent':'Mozilla/5.0 (Linux; Android 9; SM-J610F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.73 Mobile Safari/537.36',
-'sec-ch-ua-platform':'"Android"',
-'origin':'https://js.stripe.com',
-'sec-fetch-site':'same-site',
-'sec-fetch-mode':'cors',
-'sec-fetch-dest':'empty',
-'referer':'https://js.stripe.com/',
-'accept-encoding':'gzip, deflate, br',
-'accept-language':'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',}
-			d1=f'type=card&card[number]={cn}&card[cvc]={ccv}&card[exp_month]={exp}&card[exp_year]={exy}&guid=789f660e-9df9-4a2f-a762-30cfb520694f32a7a7&muid=af4b39a3-627e-4556-83aa-c6d4f6ee583f44dc48&sid=5092f25a-dc84-4682-a5f3-5729a614df9fb88501&payment_user_agent=stripe.js%2F0d3c53128%3B+stripe-js-v3%2F0d3c53128&time_on_page=97246&key=pk_test_QAdf5s3X1BEW3sakhdhuqpQO&_stripe_account=acct_1GAQrNFOKqtesiOC'
-			r = requests.post(url,headers=h,data=d1)
-			r = int(r.status_code)
-			if r == int(200):
-				respo= f"""
+			
+			respo= f"""
 ┏━━━━━━━━━━━━━━
 ┣ 🍂 𝑪𝑪 𝑺𝑺𝑪𝑹𝑨𝑷𝑷𝑬𝑹 🍂 ┗━━━━━━━━━━━━━━
 ════════════════════                   ╠𝑪𝑪: {cc}
@@ -99,10 +78,7 @@ def boten(message):
 ┗━━━━━━━━━━━━━━
 🧑🏻‍💻| 𝑫𝐸𝑉:  @Mosalahxyz 
 🥷🏻| 𝑪𝑯:@Freeintrnn """
-				bot.send_message(message.chat.id,text=respo,parse_mode='html',reply_markup=key)
-			else:
-				pass
-			
+			bot.send_message(message.chat.id,text=respo,parse_mode='html',reply_markup=key)
 		except:pass
 		
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
